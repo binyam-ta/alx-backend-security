@@ -16,7 +16,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from .views import sensitive_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('login/', sensitive_view, name='login'),
 ]
